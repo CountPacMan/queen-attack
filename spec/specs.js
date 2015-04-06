@@ -18,4 +18,16 @@ describe('queenAttack', function() {
   it("is true if the other piece is diagonally up-left from the queen", function() {
     expect(queenAttack([3, 5], [2, 4])).to.equal(true);
   });
+
+  it("is true if the other piece is diagonally up-right from the queen", function() {
+    expect(queenAttack([3, 5], [2, 6])).to.equal(true);
+  });
+
+  it("is true if the other piece is diagonally down-left from the queen", function() {
+    expect(queenAttack([3, 5], [6, 2])).to.equal(true);
+  });
+
+  it("is false if the the other piece is nowhere in the queen's line of sight", function() {
+    expect(queenAttack([3, 5], [5, 6])).to.equal(false);
+  });
 });
