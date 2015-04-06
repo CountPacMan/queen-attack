@@ -27,9 +27,12 @@ jQuery(document).ready(function() {
     }
 
     if (queenPos.every(isValid) && otherPos.every(isValid)) {
+      $("#not").empty();
+      if (!queenAttack(queenPos, otherPos)) {
+        $("#not").text("not");
+      }
 
-    } else {
-
+      $("#result").show();
     }
 
     event.preventDefault();
