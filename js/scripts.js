@@ -1,16 +1,8 @@
-function leapYear(year) {
-  return (year % 4 === 0) && (year % 400 === 0 || year % 100 != 0);
+function queenAttack(queenPos, otherPos) {
+  // row is 0 element of array, column is 1
+  return (queenPos[0] === otherPos[0]) || (queenPos[1] === otherPos[1]);
 }
 
 jQuery(document).ready(function() {
-  $("form#leap-year").submit(function(event) {
-    var year = parseInt($("input#year").val());
-    var result = leapYear(year);
 
-    $(".year").text(year);
-    result ? $(".not").empty() : $(".not").text("not");
-
-    $("#result").show();
-    event.preventDefault();
-  });
 });

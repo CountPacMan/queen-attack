@@ -1,17 +1,13 @@
-describe('leapYear', function() {
-  it("is false for a year that is not divisible by 4", function() {
-    expect(leapYear(1999)).to.equal(false);
+describe('queenAttack', function() {
+  it("is false if the coordinates are not horizontally, vertically, or diagonally in line with each other", function() {
+    expect(queenAttack([1, 1], [2, 3])).to.equal(false);
   });
 
-  it("is true for most years divisible by 4", function() {
-    expect(leapYear(2012)).to.equal(true);
+  it("is true if the queen is in the same row as the other piece", function() {
+    expect(queenAttack([1,1], [1, 2])).to.equal(true);
   });
 
-  it("is flase for most years divisible by 100", function() {
-    expect(leapYear(1900)).to.equal(false);
-  });
-
-  it("is true for all years divisible by 400", function() {
-     expect(leapYear(2000)).to.equal(true); 
+  it("is true if the queen is in the same column as the other piece", function() {
+    expect(queenAttack([6,2], [1, 2])).to.equal(true);
   });
 });
