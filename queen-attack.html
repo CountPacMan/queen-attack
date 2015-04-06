@@ -11,13 +11,21 @@
     <div class="container">
       <h1>Queen attack!</h1>
 
-      <form id="leap-year">
+      <div id="error" class="text-danger h3">
+      </div>
+      <form id="queen-attack">
         <div class="form-group">
-          <label for="queen">Enter the queen&apos;s position</label>
-          <input id="queen" type="text">
+          <label for="queen_row">Enter the queen&apos;s row position</label>
+          <input id="queen_row" type="text">
 
-          <label for="attack">Enter the position to attack</label>
-          <input id="attack" type="text">
+          <label for="queen_col">Enter the queen&apos;s column position</label>
+          <input id="queen_col" type="text">
+
+          <label for="attack_row">Enter the row position to attack</label>
+          <input id="attack_row" type="text">
+
+          <label for="attack_col">Enter the column position to attack</label>
+          <input id="attack_col" type="text">
         </div>
 
         <button type="submit" class="btn">Fight!</button>
