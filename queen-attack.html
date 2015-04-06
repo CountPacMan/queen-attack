@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-2.1.3.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Queen attack!</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Queen attack!</h1>
+
+      <form id="leap-year">
+        <div class="form-group">
+          <label for="queen">Enter the queen&apos;s position</label>
+          <input id="queen" type="text">
+
+          <label for="attack">Enter the position to attack</label>
+          <input id="attack" type="text">
+        </div>
+
+        <button type="submit" class="btn">Fight!</button>
+      </form>
+
+      <div id="result">
+        <p>The position <span class="position"></span> is <span class="not"></span> in range of the queen.</p>
+      </div>
+    </div>
+  </body>
+</html>
